@@ -2,9 +2,11 @@
 import React from 'react';
 import { AppBar } from 'react-toolbox/lib/app_bar';
 
+import styles from './index.css';
+
 const Layout = ({ children }) => (
 	<div>
-		<AppBar title="Young People in Christ" />
+		<AppBar title="Young People in Christ" theme={styles} />
 		{children}
 	</div>
 );

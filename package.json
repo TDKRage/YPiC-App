@@ -4,7 +4,7 @@
   "description": "Starting point for all projects",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel security-check start:server lint:watch test:watch start:mockapi",
+    "start": "npm-run-all --parallel security-check start:server lint:watch test:watch",
     "start:server": "babel-node buildScripts/srcServer.js",
     "security-check": "nsp check",
     "lint": "esw webpack.config.* src buildScripts --color",
@@ -26,6 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "history": "^4.7.2",
+    "normalize.css": "^7.0.0",
     "postcss": "^6.0.16",
     "postcss-cssnext": "^3.0.2",
     "postcss-each": "^0.10.0",
