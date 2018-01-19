@@ -54,7 +54,16 @@ export default {
 	module: {
 		rules: [
 			{ test: /\.js$/, exclude: /node_modules/, loader: ['babel-loader'] },
+			{ test: /\.jsx$/, exclude: /node_modules/, loader: ['babel-loader'] },
 			{ test: /\.css$/, loader: ['style-loader', 'css-loader'] },
 		]
-	}
+	},
+	resolve: {
+    extensions: ['.js', '.jsx'],
+    modules: ['node_modules', 'src'],
+  },
+  watchOptions: {
+    ignored: /node_modules/,
+    poll: false,
+  },
 };
